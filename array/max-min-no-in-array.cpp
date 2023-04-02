@@ -4,7 +4,7 @@ using namespace std;
 int main() {
   int arr[] = {1,3,5,6,7,9,12,-30,13,15,10};
   int size=11;
-  int max=INT_MIN;
+  int max = INT_MIN;
   int min = INT_MAX;
 
   for(int i=0; i<size; i++){
