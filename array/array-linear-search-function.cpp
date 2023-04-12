@@ -16,7 +16,9 @@ int main() {
   cout<<"Enter no to find"<<endl;
   int key;
   cin>>key;
-
+  // this brute approach 
+  // Linear Search but its time complexity is o(n) 
+  // here we iterate and check that our arr[i] == target or not
   if(find(arr,key , size )){
     cout<<key<<" found";
   }
