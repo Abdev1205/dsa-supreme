@@ -10,9 +10,6 @@ int main() {
         {
             cout<<"prime no "<<i<<endl;
         }
-        
-        
-        
     }
     
 }

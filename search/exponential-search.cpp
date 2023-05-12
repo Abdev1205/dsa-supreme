@@ -42,7 +42,7 @@ int exponentialSearch(vector<int> arr, int key)
 int main()
 {
   vector<int> arr{3, 4, 5, 6, 11, 13, 15, 17, 56, 70};
-  int key = 70;
+  int key = 56;
   int ans = exponentialSearch(arr, key);
   cout << ans;
 }
