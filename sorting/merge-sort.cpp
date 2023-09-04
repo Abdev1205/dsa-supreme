@@ -60,7 +60,7 @@ void merge(vector<int> &arr, int s, int e)
     j++;
     mainArrayIndex++;
   }
-  // Free the dynamically allocated memory
+  // Free the dynamically allocated memory this is very important to save space
   delete[] left;
   delete[] right;
 }
