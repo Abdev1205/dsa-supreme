@@ -1,9 +1,15 @@
 {
     "files.associations": {
+        ".env*": "dotenv",
         "iostream": "cpp",
         "ostream": "cpp",
         "vector": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "list": "cpp",
+        "xhash": "cpp",
+        "xtree": "cpp",
+        "iterator": "cpp",
+        "xmemory": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
