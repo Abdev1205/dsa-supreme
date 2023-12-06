@@ -16,7 +16,7 @@ int partion(vector<int> &arr, int s, int e)
   int pivotIndex = s;
   int pivotElement = arr[pivotIndex];
 
-  // find right place for pivot element and plce it there
+  // find right place for pivot element and place it there
   int count = 0;
   for (int i = s + 1; i <= e; i++)
   {
