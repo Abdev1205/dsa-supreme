@@ -9,7 +9,15 @@
         "xhash": "cpp",
         "xtree": "cpp",
         "iterator": "cpp",
-        "xmemory": "cpp"
+        "xmemory": "cpp",
+        "*.rmd": "markdown",
+        "initializer_list": "cpp",
+        "type_traits": "cpp",
+        "xstring": "cpp",
+        "tuple": "cpp",
+        "utility": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp"
     },
     "C_Cpp.errorSquiggles": "disabled"
 }
