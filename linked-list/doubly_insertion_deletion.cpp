@@ -18,7 +18,10 @@ public:
     this->prev = NULL;
     this->next = NULL;
   }
-  ~Node() { cout << "Deleting this: " << this->data << endl; }
+  ~Node() {
+    // destructing
+    cout << "Deleting this: " << this->data << endl;
+  }
 };
 
 void print(Node *head) {
@@ -138,6 +141,24 @@ void deleteNode(Node *&head, Node *&tail, int position) {
     delete temp;
     return;
   }
+
+  // yaha pas ek pointer left bana diya
+  Node *left = head;
+  int i = 1;
+  // ise ab mai left find kar raha hu
+  while (i < position - 1) {
+    left = left->next;
+    i++;
+  }
+  // ab hame left mil gaya hai to ab hum curr and right nikal lenge
+  Node *curr = left->next;
+  Node *right = curr->next;
+  // ab hum curr ko alag karenge
+  left->next = right;
+  right->prev = left;
+  curr->prev = NULL;
+  curr->next = NULL;
+  return;
 }
 
 int main() {
@@ -151,8 +172,11 @@ int main() {
   tail = second;
   insertAtHead(head, tail, 23);
   insertAtHead(head, tail, 39);
-  // insertAtTail(head, tail, 82);
+  insertAtTail(head, tail, 82);
   insertAtPostion(head, tail, 2, 61);
-  deleteNode(head, tail, 0);
+  cout << "Before deletion " << endl;
+  print(head);
+  deleteNode(head, tail, 5);
+  cout << "After deletion " << endl;
   print(head);
 }
