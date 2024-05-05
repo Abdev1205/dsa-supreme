@@ -1,5 +1,5 @@
 // galat hai sahi karna hai 
-// code runner nahi chal raha hai sahi se1
+// code runner nahi chal raha hai sahi se
 
 #include <iostream>
 #include <vector>
