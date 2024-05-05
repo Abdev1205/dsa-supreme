@@ -1,4 +1,5 @@
-// galat hai sahi karna hai
+// galat hai sahi karna hai 
+// code runner nahi chal raha hai sahi se
 
 #include <iostream>
 #include <vector>
