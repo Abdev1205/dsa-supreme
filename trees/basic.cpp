@@ -40,3 +40,9 @@ class Node{
 // -> some of the trversal techniques are 
 //    1. Level Order traversal :-> here we traversing the tree in level wise
 //                                 like level 0 , level 1 , level 2 etc...
+//    2. In order traversal (LNR) :-> here we traversing the tree wheew we are folowing
+//                                LNR rule which says that first left node and then node and then right node
+//    3. Pre Order traversal (NlR) :-> here we traversing the tree and following the NLR rule so 
+//                                first node will print and then left node and then right node
+//    4. Post Order travesal (LRN) : here we traversing the tree and following the LRN rule so
+//                                 first it will print left node and then right node and then node
