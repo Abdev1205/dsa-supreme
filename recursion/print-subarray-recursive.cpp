@@ -20,14 +20,6 @@ void printSubarray(vector<int> arr, int start, int end)
   //^ recurive calling
   printSubarray(arr, start, end + 1);
 
-  class Solution
-  {
-  public:
-    string
-    numberToWords(int num)
-    {
-    }
-  };
 }
 
 int main()
