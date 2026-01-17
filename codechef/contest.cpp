@@ -1,59 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> findPrime(int n) {
-    int l = (n < 100) ? 600 : n * log(n) * 1.5; 
-    vector<bool> ip(l + 1, true);
-    vector<int> p;
-
-    ip[0] = ip[1] = false;
-
-    for (int i = 2; i * i <= l; i++) {
-        if (ip[i]) {
-            // cout<<i<<j<<endl;
-            for (int j = i * i; j <= l; j += i) {
-                // cout<<"When i*i and j inside for loop"<<i<<j<<endl;
-                ip[j] = false;
-            }
-        }
-    }
-
-    for (int i = 2; p.size() < n && i <= l; i++) {
-        if (ip[i]) {
-            cout<<i<<endl;
-            p.push_back(i);
-        }
-    }
-
-    return p;
-}
-
 int main() {
     int t;
-    cin >> t;
+    cin >> t; 
 
     while (t--) {
-        int n, m;
-        cin >> n >> m;
-        // cout << "N: " << n << " M: " << m << endl;
+        int n;
+        cin >> n;
+        vector<int> v(n + 1);  
 
-        vector<int> p = findPrime(n * m);
-        vector<vector<int>> ans(n, vector<int>(m, 0));
+        for (int i = 0; i < n + 1; i++) {
+            cin >> v[i];  
+        }
 
-        int pi = 0;
+        int lastEle = v[n]; 
+
+        vector<int> firstN(v.begin(), v.begin() + n);
+        sort(firstN.begin(), firstN.end());
+
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                ans[i][j] = p[pi];
-                pi++;
+            if (firstN[i] <= 2 * lastEle) {
+                if (lastEle < firstN[i]) {
+                    swap(firstN[i], lastEle);
+                }
+            } else {
+                break; 
             }
         }
 
-        for (const auto& row : ans) {
-            for (int prime : row) {
-                cout << prime << " ";
-            }
-            cout << endl;
-        }
+        int sum = accumulate(firstN.begin(), firstN.end(), 0);
+        cout << sum << endl; 
     }
 
     return 0;

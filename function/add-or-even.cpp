@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int findOddEven (int n){
+void findOddEven (int n){
   switch (n%2)
   {
   case 1 :
@@ -15,6 +15,6 @@ int findOddEven (int n){
 int main() {
   int n;
   cin>>n;
-  cout<<findOddEven(n);
+  findOddEven(n);
   return 0;
 }
